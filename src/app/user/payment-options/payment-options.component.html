@@ -1,0 +1,27 @@
+
+
+<div class="container">
+    <hr class="my-5" />
+    
+	<div class="row">
+	
+		<div class="col" (click)="openCheckout()">
+		    <button class="col btn btn-pink-moon">Pay with Credit Card</button>
+		</div> 
+		<div class="col" (click)="payPal()">
+		    <button class="col btn btn-cool-blues">pay with Paypal </button>
+		</div> 
+		<div class="col" >
+		   <!--  <button class="col btn btn-dark-blue" (click)="payPaytm()">Pay With Paytm</button> -->
+		   <a type="button" class="col btn btn-dark-blue" style="background-color:#7474BF" [href]="url">pay with paytm</a>
+		</div> 
+		</div>
+	
+</div>
+<!-- <a [href]="https://www.google.com/"
+    appExternalUrl
+>Click Me</a> -->
+
+
+
+

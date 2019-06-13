@@ -1,0 +1,21 @@
+
+
+<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+	<input type="text" #fullName="ngModel" [(ngModel)]="userService.selectedUser.fullName" name="fullName" placeholder="fullName" required [ngClass]="{'invalid-textbox':signUpForm.submitted && !fullName.valid}">
+	<div *ngIf="signUpForm.submitted && !fullName.valid">
+		<label class="validation-message">This field is required</label>>
+	</div>
+	<input type="text" #fullName="ngModel" [(ngModel)]="userService.selectedUser.email" name="email" placeholder="email">
+
+	<input type="password" #fullName="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="password">
+	
+	<input type="submit" value="Sign Up">
+</form>
+
+<div class="success" *ngIf="showSuccessMessage">
+	 saved succcessFully
+</div>
+
+<div class="alert" *ngIf="serverErrorMessages">
+	{{serverErrorMessages}}
+</div>
